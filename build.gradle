@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.pangtaek'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit 5
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // MyBatis
+    // https://mvnrepository.com/artifact/org.mybatis/mybatis
+    implementation 'org.mybatis:mybatis:3.5.6'
+
+    // MySQL Connector/J
+    // https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+    implementation 'com.mysql:mysql-connector-j:8.3.0'
+}
+
+test {
+    useJUnitPlatform()
+}
